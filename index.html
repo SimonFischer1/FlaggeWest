@@ -1,33 +1,175 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flagge West</title>
+    <title>FlaggeWest – Der coolste Verein</title>
+
     <style>
+        :root {
+            --main-blue: #0d2b66;
+            --light-blue: #1454a8;
+        }
+
         body {
-            background-color: white;
             margin: 0;
-            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+            color: #111;
+            scroll-behavior: smooth;
+        }
+
+        /* Header + Navigation */
+        header {
+            background: var(--main-blue);
+            padding: 10px 40px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
+
+        header img {
+            height: 70px;
+            width: auto;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 1.15rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light-blue);
+        }
+
+        /* Content sections */
+        section {
+            padding: 80px 15%;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        section:nth-child(odd) {
+            background: #f8f8f8;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         h1 {
-            font-size: 4rem;
-            margin: 0;
+            color: var(--main-blue);
+            font-size: 3rem;
         }
-        p {
-            font-size: 1.5rem;
-            margin-top: 10px;
+
+        h2 {
+            color: var(--main-blue);
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #efefef;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hidden {
+            opacity: 0.3;
+            font-size: 0.75rem;
+            transition: 0.3s;
+        }
+
+        .hidden:hover {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <h1>FLAGGE WEST</h1>
-    <p>verarscht</p>
+
+    <!-- HEADER + LOGO -->
+    <header>
+        IMG_0714.jpg
+
+        <nav>
+            #entstehungEntstehung</a>
+            #gruendungGründung</a>
+            #ideeIdee</a>
+            #kontaktKontakt</a>
+        </nav>
+    </header>
+
+    <!-- ENTSTEHUNG -->
+    <section id="entstehung">
+        <h1>FlaggeWest – Die Entstehung</h1>
+        <p>
+            FlaggeWest ist nicht nur ein Wohnheim – es ist eine Lebenseinstellung.
+            Während FlaggeOST existiert, aber eher Durchschnitt liefert,
+            hat FlaggeWest früh bewiesen:
+            <strong>Wir sind die Cooleren.</strong>
+        </p>
+    </section>
+
+    <!-- GRÜNDUNG -->
+    <section id="gruendung">
+        <h2>Die Gründung</h2>
+        <p>
+            Aus einer Idee wurde eine Bewegung.  
+            Aus einer WG wurde eine Familie.  
+            Und aus dieser Familie entsteht ein Verein:  
+            <strong>FlaggeWest</strong>.
+        </p>
+    </section>
+
+    <!-- IDEE -->
+    <section id="idee">
+        <h2>Die Idee hinter FlaggeWest</h2>
+        <p>
+            FlaggeWest steht für Zusammenhalt, Humor, Chaos, Abenteuer,
+            gegenseitige Unterstützung – und das Wissen:
+            <strong>Gemeinsam läuft’s einfach besser.</strong>
+        </p>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p>
+            Du willst Kontakt aufnehmen?<br><br>
+            ✉️ <strong>E-Mail:</strong> Noch in der technischen Entwicklung<br>
+            🏠 Standort: Die legendäre Flagge
+        </p>
+    </section>
+
+    <!-- IMPRESSUM & LIEBE -->
+    <footer>
+        <p><strong>Diese Website wurde mit Liebe erstellt ❤️</strong></p>
+
+        <div class="hidden">
+            <p>
+               <strong> © 2026 FlaggeWest – Verein in Gründung </strong> 
+                <br>Impressum folgt nach offizieller Eintragung.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
